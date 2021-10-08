@@ -28,4 +28,13 @@ const server = app.listen(port, () => {
 });
 
 
+// GET routes
+app.get("/GetData", (req, res) => {
+    res.send(projectData);
+});
 
+// POST routes
+app.post("/PostData", (req, res) => {
+    projectData.push(req.body);
+    res.send("Post request done.");
+});
