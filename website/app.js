@@ -5,3 +5,13 @@ const API_KEY = "&appid=37849b115c3a8e5531fa6a07d6db9de6"
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+
+
+
+const getData = async function(url="") getData {
+    const resp = await fetch("/GetData");
+    
+    return resp.json();
+}
+
+console.log(getData("/GetData"));
