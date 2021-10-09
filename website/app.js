@@ -8,10 +8,13 @@ let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 
 
-const getData = async function(url="") getData {
+const getData = async function(url="") {
     const resp = await fetch("/GetData");
     
     return resp.json();
 }
 
-console.log(getData("/GetData"));
+getData("/GetData")
+.then(function(data) {
+console.log(data);
+});
