@@ -26,7 +26,6 @@ app.use(express.static('website'));
 const port = 3000;
 const server = app.listen(port, listening);
  function listening(){
-    // console.log(server);
     console.log(`running on localhost: ${port}`);
   };
 
@@ -38,7 +37,8 @@ app.get("/GetData", (req, res) => {
 
 
 // POST routes
-app.post("/PostData", (req, res) => {
-    projectData.push(req.body);
-    res.send("Post request done.");
+app.post("/PostData", (req) => {
+    projectData.temperature = req.body.temperature;
+    projectData.date = req.body.date;
+    projectData.userIn = req.body.userIn;
 });
