@@ -1,10 +1,10 @@
 /* Global Variables */
-const API_URL = "http://api.openweathermap.org/data/2.5/weather?id="
-const API_KEY = "&appid=37849b115c3a8e5531fa6a07d6db9de6"
+const API_URL = "http://api.openweathermap.org/data/2.5/weather?zip="
+const API_KEY = "&appid=37849b115c3a8e5531fa6a07d6db9de6&units=imperial"
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = (d.getMonth() + 1)+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 
 const getData = async function(url="") {
